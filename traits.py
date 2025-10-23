@@ -1,20 +1,23 @@
-from enum import StrEnum, auto
+from enum import Enum
 
-class Trait(StrEnum):
-    CLAN = auto()
-    ACE = auto()
-    ELECTRIC = auto()
-    UNDEAD = auto()
-    GOBLIN = auto()
-    NOBLE = auto()
-    FIRE = auto()
-    BRAWLER = auto()
-    RANGER = auto()
-    BLASTER = auto()
-    AVENGER = auto()
-    ASSASSIN = auto()
-    JUGGERNAUT = auto()
-    MAGE = auto()
+class Trait(Enum):
+    CLAN = "CLAN"
+    ACE = "ACE"
+    ELECTRIC = "ELECTRIC"
+    UNDEAD = "UNDEAD"
+    GOBLIN = "GOBLIN"
+    NOBLE = "NOBLE"
+    FIRE = "FIRE"
+    BRAWLER = "BRAWLER"
+    RANGER = "RANGER"
+    BLASTER = "BLASTER"
+    AVENGER = "AVENGER"
+    ASSASSIN = "ASSASSIN"
+    JUGGERNAUT = "JUGGERNAUT"
+    MAGE = "MAGE"
 
     def __repr__(self):
-        return f"{self.name}"
+        return self.name
+
+    def image_path(self) -> str:
+        return f"images/traits/{self.name.lower()}.webp"
