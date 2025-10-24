@@ -1,18 +1,19 @@
 # Merge Tactics Calculator — Input Guide
-The program generates all valid teams, taking the following into account:  
+The program generates all valid teams in Clash Royale Merge Tactics, taking the following into account:  
 - Troops already in the team
 - Excluded troops
 - Trait dummies  
-- Trait requirements (including counts)  
+- Trait requirements
 
 It then scores each team based on active traits and displays the top results.
 
 ---
 
 ### Input Types
+NOTE: Using prefixes are supported.
 
 | Input Type | Syntax | Example | Meaning |
-|------------|--------|---------|--------|
+|-------------|---------|----------|----------|
 | Troop | lowercase | `archer` | Ensures the troop is in the team |
 | Exclude troop | `!` + lowercase | `!archer` | Ensures the troop is **not** in the team |
 | Trait | UPPERCASE | `CLAN` | Requires **2** of this trait |
@@ -20,14 +21,16 @@ It then scores each team based on active traits and displays the top results.
 | Exclude trait | `!` + UPPERCASE | `!CLAN` | Prohibits **2** of this trait |
 | Exclude trait with count | `!` + UPPERCASE + number | `!CLAN4` | Prohibits the given number of this trait |
 | Trait dummy | `TD:` + UPPERCASE + `:` + UPPERCASE | `TD:FIRE:UNDEAD` | Adds a trait dummy with both traits |
+| Sort ascending by cost | `-ascending` | `-a` | Prioritizes lower-cost teams when scores are tied |
+| Sort descending by cost | `-descending` | `-d` | Prioritizes higher-cost teams when scores are tied |
 
 ### Example
 
 ```
-!goldenknight archer TD:FIRE:BRAWLER NOBLE4
+archer !goldenknight TD:FIRE:BRAWLER NOBLE4
 ```
-- Excludes `goldenknight` from the team
 - Ensures `archer` is in the team
+- Excludes `goldenknight` from the team
 - Adds a trait dummy with `FIRE` and `BRAWLER` traits
 - Requires at least 4 `NOBLE` trait troops
 
