@@ -3,20 +3,20 @@ from collections import Counter
 from traits import Trait
 
 class Troop:
-    def __init__(self, trait_1: Trait, trait_2: Trait, name: str | list[str]):
-        self.trait_1 = trait_1
-        self.trait_2 = trait_2
+    def __init__(self, trait1: Trait, trait2: Trait, name: str | list[str]):
+        self.trait1 = trait1
+        self.trait2 = trait2
         self.names = name if isinstance(name, list) else [name]
 
     def add_traits(self, trait_counter: Counter[Trait, int]):
-        trait_counter[self.trait_1] += 1
-        trait_counter[self.trait_2] += 1
+        trait_counter[self.trait1] += 1
+        trait_counter[self.trait2] += 1
 
     def subtract_traits(self, trait_counter: Counter[Trait, int]):
-        trait_counter[self.trait_1] -= 1
-        trait_counter[self.trait_2] -= 1
-        if trait_counter[self.trait_1] == 0: del trait_counter[self.trait_1]
-        if trait_counter[self.trait_2] == 0: del trait_counter[self.trait_2]
+        trait_counter[self.trait1] -= 1
+        trait_counter[self.trait2] -= 1
+        if trait_counter[self.trait1] == 0: del trait_counter[self.trait1]
+        if trait_counter[self.trait2] == 0: del trait_counter[self.trait2]
 
     def image_path(self) -> str:
         return f"images/troops/{self.names[0]}.webp"

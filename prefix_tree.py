@@ -17,7 +17,7 @@ class Trie:
     def search_with_fallback(self, word: str) -> object | None:
         node = self.root
         for c in word:
-            if c not in node.children: return None
+            if c not in node.children: raise ValueError(f"{word} not found in Trie")
             node = node.children[c]
 
         while not node.obj:
