@@ -33,6 +33,4 @@ It then scores each composition based on active traits and displays the top resu
 
 - **2 traits** → 2 points  
 - **4 traits** → 5 points  
-- **6 or more traits** → 10 points  
-
-The program calculates the score for each composition based on these thresholds and displays the **top scoring compositions** with troop icons, traits, and total score.
+- **6 or more traits** → 10 points
