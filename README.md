@@ -10,7 +10,7 @@ It then scores each team based on active traits and displays the top results.
 ---
 
 ### Input Types
-NOTE: Using prefixes are supported.
+NOTE: Using prefixes is supported.
 
 | Input Type | Syntax | Example | Meaning |
 |-------------|---------|----------|----------|
