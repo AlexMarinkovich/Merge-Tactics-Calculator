@@ -28,7 +28,7 @@ NOTE: Using prefixes for strings in the input is supported.
 ### Example
 
 ```
-archer !goldenknight TD:FIRE:BRAWLER NOBLE4
+archer !goldenknight FIRE:BRAWLER NOBLE4
 ```
 - Ensures `archer` is in the team
 - Excludes `goldenknight` from the team
