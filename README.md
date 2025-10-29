@@ -28,9 +28,9 @@ NOTE: Using prefixes for strings in the input is supported.
 ### Example
 
 ```
-archer !goldenknight FIRE:BRAWLER NOBLE4
+barb !goldenknight FIRE:BRAWL NOBLE4
 ```
-- Ensures `archer` is in the team
+- Ensures `barbarian` is in the team
 - Excludes `goldenknight` from the team
 - Adds a trait dummy with `FIRE` and `BRAWLER` traits
 - Requires at least 4 `NOBLE` trait troops
