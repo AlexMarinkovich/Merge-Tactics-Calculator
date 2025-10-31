@@ -34,7 +34,7 @@ ALL_TROOPS = {
     Troop(3,    Trait.ACE,        Trait.BLASTER,      "executioner"),
     Troop(3,    Trait.ACE,        Trait.AVENGER,      "pekka"),
     Troop(4,    Trait.ACE,        Trait.ASSASSIN,     "bandit"),
-    Troop(3,    Trait.ELECTRIC,   Trait.AVENGER,      "electrogiant"),
+    Troop(3,    Trait.ELECTRIC,   Trait.AVENGER,      "electrogiant", "egiant"),
     Troop(4,    Trait.ELECTRIC,   Trait.MAGE,         "electrowizard", "ewiz"),
     Troop(3,    Trait.UNDEAD,     Trait.BRAWLER,      "giantskeleton"),
     Troop(2,    Trait.UNDEAD,     Trait.RANGER,       "skeletondragons", "skellydragons"),
