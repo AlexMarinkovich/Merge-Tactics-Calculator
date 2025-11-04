@@ -20,7 +20,7 @@ NOTE: Using prefixes for strings in the input is supported.
 | Trait with count | number + UPPERCASE | `4CLAN` | Requires the given number of this trait |
 | Exclude trait | `!` + UPPERCASE | `!CLAN` | Prohibits **2** of this trait |
 | Exclude trait with count | `!` + number + UPPERCASE | `!4CLAN` | Prohibits the given number of this trait |
-| Trait dummy | UPPERCASE + `:` + UPPERCASE | `TD:FIRE:UNDEAD` | Adds a trait dummy with both traits |
+| Trait dummy | UPPERCASE + `:` + UPPERCASE | `FIRE:UNDEAD` | Adds a trait dummy with both traits |
 | Sort ascending by cost | `-ascending` | `-a` | Prioritizes lower-cost teams when scores are tied |
 | Sort descending by cost | `-descending` | `-d` | Prioritizes higher-cost teams when scores are tied |
 | Team size | number | `7` | Changes team size from 6 to the specified number |
@@ -28,7 +28,7 @@ NOTE: Using prefixes for strings in the input is supported.
 ### Example
 
 ```
-barb !goldenknight FIRE:BRAWL NOBLE4
+barb !goldenknight FIRE:BRAWL 4NOBLE
 ```
 - Ensures `barbarian` is in the team
 - Excludes `goldenknight` from the team
