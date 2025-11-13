@@ -1,7 +1,7 @@
-from enum import StrEnum, auto
+from enum import IntEnum, auto
 
-class Trait(StrEnum):
-    CLAN = auto()
+class Trait(IntEnum):
+    CLAN = 0
     ACE = auto()
     ELECTRIC = auto()
     UNDEAD = auto()
@@ -16,5 +16,6 @@ class Trait(StrEnum):
     JUGGERNAUT = auto()
     MAGE = auto()
 
-    def image_path(self) -> str:
-        return f"images/traits/{self.lower()}.webp"
+    @property
+    def image(self) -> str:
+        return f"images/traits/{self.name.lower()}.webp"

@@ -1,8 +1,8 @@
 # Merge Tactics Calculator — Input Guide
-The program generates all valid teams in Clash Royale Merge Tactics, taking the following into account:  
+The program generates all valid teams in Clash Royale Merge Tactics, taking the following into account:
 - Troops already in the team
 - Excluded troops
-- Trait dummies  
+- Trait dummies
 - Trait requirements
 
 It then scores each team based on active traits and displays the top results.
@@ -21,9 +21,11 @@ NOTE: Using prefixes for strings in the input is supported.
 | Exclude trait | `!` + UPPERCASE | `!CLAN` | Prohibits **2** of this trait |
 | Exclude trait with count | `!` + number + UPPERCASE | `!4CLAN` | Prohibits the given number of this trait |
 | Trait dummy | UPPERCASE + `:` + UPPERCASE | `FIRE:UNDEAD` | Adds a trait dummy with both traits |
+| Team size | number | `7` | Sets the team size (default 6) |
 | Sort ascending by cost | `-ascending` | `-a` | Prioritizes lower-cost teams when scores are tied |
 | Sort descending by cost | `-descending` | `-d` | Prioritizes higher-cost teams when scores are tied |
-| Team size | number | `7` | Changes team size from 6 to the specified number |
+| Display count | `-` + number | `-10` | Sets how many top teams to display (default 10) |
+| Brute force | `-bruteforce` | `-b` | Search all troop combinations instead of ones with common traits. |
 
 ### Example
 

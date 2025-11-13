@@ -1,5 +1,3 @@
-from collections import Counter
-
 from traits import Trait
 
 class Troop:
@@ -9,21 +7,9 @@ class Troop:
         self.trait2 = trait2
         self.names = names
 
-    def add_traits(self, trait_counter: Counter[Trait, int]):
-        trait_counter[self.trait1] += 1
-        trait_counter[self.trait2] += 1
-
-    def subtract_traits(self, trait_counter: Counter[Trait, int]):
-        trait_counter[self.trait1] -= 1
-        trait_counter[self.trait2] -= 1
-        if trait_counter[self.trait1] == 0: del trait_counter[self.trait1]
-        if trait_counter[self.trait2] == 0: del trait_counter[self.trait2]
-
-    def image_path(self) -> str:
+    @property
+    def image(self) -> str:
         return f"images/troops/{self.names[0]}.webp"
-
-    def __repr__(self):
-        return f"{self.names[0]}"
 
 ALL_TROOPS = {
     Troop(2,    Trait.CLAN,       Trait.BRAWLER,      "barbarian"),
