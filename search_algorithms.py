@@ -28,9 +28,8 @@ def generate_connected_subgraphs(graph: dict[object, set], k: int):
 
 if __name__ == "__main__":
     import itertools
-    from troops import ALL_TROOPS, Troop
-    from traits import Trait
-    from collections import defaultdict, Counter
+    from troops import Troop
+    from collections import defaultdict
     import time
     from teams import Team
 
@@ -47,10 +46,10 @@ if __name__ == "__main__":
     def naive_generate_subgraphs(graph, k):
         return [c for c in itertools.combinations(graph.keys(), k) if is_connected(c, graph)]
 
-    k = 8
+    k = 7
     troop_graph = defaultdict(set)
-    for t1 in ALL_TROOPS:
-        for t2 in ALL_TROOPS:
+    for t1 in Troop.all_troops:
+        for t2 in Troop.all_troops:
             if t1 == t2: continue
             if {t1.trait1, t1.trait2} & {t2.trait1, t2.trait2}:
                 troop_graph[t1].add(t2)
@@ -65,11 +64,11 @@ if __name__ == "__main__":
     print(f"{time.time() - start:.6f} seconds - Naive subgraphs ({len(naive_result)})")
 
     start = time.time()
-    combinations = list(itertools.combinations(ALL_TROOPS, k))
+    combinations = list(itertools.combinations(Troop.all_troops, k))
     print(f"{time.time() - start:.6f} seconds - Itertools combinations ({len(combinations)})")
 
     start = time.time()
-    troop_selection = list(ALL_TROOPS)[0:k]
+    troop_selection = list(Troop.all_troops)[0:k]
     for i in range(len(combinations)):
         _ = Team(troop_selection, None)
     print(f"{time.time() - start:.6f} seconds - Making team objects ({len(combinations)})")
