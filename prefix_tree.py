@@ -19,7 +19,7 @@ class Trie:
         for c in word:
             if c not in node.children: raise ValueError(f"{word} not found in Trie")
             node = node.children[c]
-
-        while not node.obj:
+            
+        while node.obj is None:
             node = node.children[sorted(node.children.keys())[0]]
         return node.obj
