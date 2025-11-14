@@ -4,19 +4,20 @@ class Troop():
     all_troops = set()
     instance_count = 0
 
-    def __init__(self, cost: int, trait1: Trait, trait2: Trait, *names: str):
+    def __init__(self, cost: int, trait1: Trait, trait2: Trait, name: str, *aliases: str):
         self.cost = cost
         self.trait1 = trait1
         self.trait2 = trait2
-        self.names = names
+        self.name = name
+        self.all_names = (name,) + aliases
         self.meta_ranking = Troop.instance_count
-        self.image = f"images/troops/{self.names[0]}.webp"
-        if names[0] == "traitdummy": return
+        self.image = f"images/troops/{name}.webp"
+        if name == "traitdummy": return
         Troop.all_troops.add(self)
         Troop.instance_count += 1
     
     def __repr__(self) -> str:
-        return self.names[0]
+        return self.name
 
 # Order the following troops from most useful to least useful
 Troop(3,    Trait.ACE,        Trait.BLASTER,      "executioner")
