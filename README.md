@@ -4,14 +4,14 @@
 2. [Input Guide 🗣️](#input-guide)  
 3. [Technical Details 🤓](#technical-details)  
 
-## Introduction 🎯
+## Introduction
 Welcome to the **Merge Tactics Calculator** for **Clash Royale Merge Tactics**!
 
 The best teams in Merge Tactics are made of troops that **share many traits**. The image below shows all troops, with rows and columns representing each troop's traits. This calculator takes your current troops, generates all possible teams, scores them by active traits, and displays the **top-scoring teams**.
 
 ![Troops and Traits](images/all_troops_and_traits.jpg)
 
-## Input Guide 🗣️
+## Input Guide
 Here’s how to tell the calculator what you want:
 
 | Input Type | Syntax | Example | What it does |
@@ -48,7 +48,7 @@ barb !goldenknight FIRE:BRAWL 4NOBLE
 - **4 troops sharing a trait** → 5 points  
 - **6 troops sharing a trait** → 10 points 
 
-## Technical Details 🤓
+## Technical Details
 
 A behind-the-scenes look at how this calculator works, with optimizations that keep it fast and accurate:
 
