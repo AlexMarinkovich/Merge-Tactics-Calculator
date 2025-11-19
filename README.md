@@ -1,8 +1,8 @@
 # Merge Tactics Calculator — README
 
-1. [Introduction 🎯](#introduction-🎯)  
-2. [Input Guide 🗣️](#input-guide-🗣️)  
-3. [Technical Details 🤓](#technical-details-🤓)  
+1. [Introduction 🎯](#introduction)  
+2. [Input Guide 🗣️](#input-guide)  
+3. [Technical Details 🤓](#technical-details)  
 
 ## Introduction 🎯
 Welcome to the **Merge Tactics Calculator** for **Clash Royale Merge Tactics**!
