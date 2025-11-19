@@ -7,7 +7,7 @@
 ## Introduction 🎯
 Welcome to the **Merge Tactics Calculator** for **Clash Royale Merge Tactics**!
 
-The best teams in Merge Tactics are made of troops that share many traits. The image below shows all troops, with rows and columns representing each troop's traits. This calculator takes your current troops, generates all possible teams, scores them by active traits, and displays the **top-scoring teams**.
+The best teams in Merge Tactics are made of troops that **share many traits**. The image below shows all troops, with rows and columns representing each troop's traits. This calculator takes your current troops, generates all possible teams, scores them by active traits, and displays the **top-scoring teams**.
 
 ![Troops and Traits](images/all_troops_and_traits.jpg)
 
@@ -22,7 +22,7 @@ Here’s how to tell the calculator what you want:
 | Trait with count | number + UPPERCASE | `4CLAN` | Requires the given number of this trait |
 | Exclude trait | `!` + UPPERCASE | `!CLAN` | Prohibits **2** troops with this trait |
 | Exclude trait with count | `!` + number + UPPERCASE | `!4CLAN` | Prohibits the given number of this trait |
-| Trait dummy | UPPERCASE + `:` + UPPERCASE | `FIRE:BRAWL` | Adds a dummy troop with both traits (counts toward trait scoring) |
+| Trait dummy | UPPERCASE + `:` + UPPERCASE | `FIRE:UNDEAD` | Adds a trait dummy with both traits (counts toward trait scoring) |
 | Team size | number | `7` | Sets the team size (default 6) |
 | Sort ascending by cost | `-ascending` | `-a` | When scores tie, prefers lower-cost teams |
 | Sort descending by cost | `-descending` | `-d` | When scores tie, prefers higher-cost teams |
