@@ -1,6 +1,6 @@
 def generate_connected_subgraphs(graph: dict[object, set], k: int):
     """Enumerate all induced connected subgraphs of size `k` from adjacency list `graph`."""
-    def backtrack(unvisited: set, subgraph: set, neighbours: set):
+    def backtrack(unvisited: set, subgraph: list, neighbours: set):
         if len(subgraph) == k:
             yield tuple(subgraph)
             return
@@ -15,21 +15,21 @@ def generate_connected_subgraphs(graph: dict[object, set], k: int):
         yield from backtrack(unvisited, subgraph, neighbours)
 
         # Case 2: Include v
-        subgraph.add(v)
+        subgraph.append(v)
         yield from backtrack(unvisited, subgraph, neighbours | graph[v])
-        subgraph.remove(v)
+        subgraph.pop()
 
         # Backtrack
         unvisited.add(v)
         
-    yield from backtrack(set(graph.keys()), set(), set())
+    yield from backtrack(set(graph.keys()), [], set())
 
 # ---------- EVERYTHING BELOW IS FOR TESTING ----------
 
 if __name__ == "__main__":
     import itertools
     from troops import Troop
-    from collections import defaultdict
+    from collections import defaultdict, Counter
     import time
     from teams import Team
 
@@ -74,4 +74,4 @@ if __name__ == "__main__":
     print(f"{time.time() - start:.6f} seconds - Making team objects ({len(combinations)})")
 
     # Verify correctness of generate_connected_subgraphs
-    print(set(frozenset(i) for i in naive_result) == set(frozenset(i) for i in result))
+    print(Counter(frozenset(i) for i in naive_result) == Counter(frozenset(i) for i in result))
