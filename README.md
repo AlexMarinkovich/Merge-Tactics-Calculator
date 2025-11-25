@@ -22,7 +22,7 @@ Here’s how to tell the calculator what you want:
 | Trait with count | number + UPPERCASE | `4CLAN` | Requires the given number of this trait |
 | Exclude trait | `!` + UPPERCASE | `!CLAN` | Prohibits **2** troops with this trait |
 | Exclude trait with count | `!` + number + UPPERCASE | `!4CLAN` | Prohibits the given number of this trait |
-| Trait dummy | UPPERCASE + `:` + UPPERCASE | `FIRE:UNDEAD` | Adds a trait dummy with both traits (counts toward trait scoring) |
+| Trait dummy | UPPERCASE + `:` + UPPERCASE | `NOBLE:UNDEAD` | Adds a trait dummy with both traits (counts toward trait scoring) |
 | Team size | number | `7` | Sets the team size (default 6) |
 | Sort ascending by cost | `-ascending` | `-a` | When scores tie, prefers lower-cost teams |
 | Sort descending by cost | `-descending` | `-d` | When scores tie, prefers higher-cost teams |
@@ -31,11 +31,11 @@ Here’s how to tell the calculator what you want:
 
 ### Example Input
 ```
-barb !goldenknight FIRE:BRAWL 4NOBLE
+barb !goldenknight NOBLE:BRAWL 4NOBLE
 ```
 - Includes `barbarian`  
 - Excludes `goldenknight`  
-- Adds a trait dummy with `FIRE` and `BRAWLER`  
+- Adds a trait dummy with `NOBLE` and `BRAWLER` traits 
 - Requires at least 4 troops with the `NOBLE` trait  
 
 ### Notes
